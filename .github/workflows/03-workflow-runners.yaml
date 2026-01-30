@@ -10,7 +10,8 @@ jobs:
       - name: Show OS
         run: | 
           echo "This job is running on an Ubuntu runner!"
-          echo $RUNNER_OS
+          echo "Runner OS: $RUNNER_OS"
+          echo "Full OS details:"
           cat /etc/*-release
 
   windows-echo:
@@ -20,10 +21,11 @@ jobs:
         shell: bash
         run: | 
           echo "This job is running on a Windows runner!"
-          echo $RUNNER_OS
+          echo " Runner OS: $RUNNER_OS"
       - name: Show OS systeminfo
         run: | 
           echo "This job is running on a Windows runner!"
+          echo "Full OS details:"
           systeminfo | findstr /B /C:"OS Name" /C:"OS Version"
 
   mac-echo:
@@ -32,5 +34,6 @@ jobs:
       - name: Show OS
         run: | 
           echo "This job is running on a MacOS runner!"
-          echo $RUNNER_OS
+          echo " Runner OS: $RUNNER_OS"
+          echo "Full OS details:"
           sw_vers
