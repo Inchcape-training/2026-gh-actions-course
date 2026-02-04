@@ -21,7 +21,7 @@ jobs:
         shell: bash
         run: | 
           echo "This job is running on a Windows runner!"
-          echo " Runner OS: $RUNNER_OS"
+          echo "Runner OS: $RUNNER_OS"
       - name: Show OS systeminfo
         run: | 
           echo "This job is running on a Windows runner!"
@@ -34,6 +34,6 @@ jobs:
       - name: Show OS
         run: | 
           echo "This job is running on a MacOS runner!"
-          echo " Runner OS: $RUNNER_OS"
+          echo "Runner OS: $RUNNER_OS"
           echo "Full OS details:"
           sw_vers
