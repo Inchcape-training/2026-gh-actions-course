@@ -88,7 +88,9 @@ jobs:
 
       - name: Install dependencies
         if: ${{ steps.cache.outputs.cache-hit }} != 'true'
-        run: npm ci
+        run: |
+          echo "Cache hit:" ${{ steps.cache.outputs.cache-hit }}
+          npm ci
 
   linting:
     runs-on: ubuntu-latest
