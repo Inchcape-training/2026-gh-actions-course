@@ -36,3 +36,23 @@ jobs:
 
       - name: Upload test results
         run: echo "Uploading test results for Node.js version ${{ matrix.node-version }} on ${{ matrix.os }}"
+
+  include-example:
+    name: ${{ matrix.color }}-${{ matrix.shape }}-${{ matrix.size }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        color: [red, green]
+        shape: [circle, square]
+        size: [small, large]
+        include:
+        - color: red
+          shape: triangle
+
+    steps:
+      - name: Dummy step
+        run: |
+          echo "Color: ${{ matrix.color }}, Shape: ${{ matrix.shape }}, Size: ${{ matrix.size }}"
+          echo "Workflow name: ${{ workflow.job.name }}"
+
+      
