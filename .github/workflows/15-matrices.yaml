@@ -53,6 +53,6 @@ jobs:
       - name: Dummy step
         run: |
           echo "Color: ${{ matrix.color }}, Shape: ${{ matrix.shape }}, Size: ${{ matrix.size }}"
-          echo "Workflow name: ${{ job.name }}"
+
 
       
