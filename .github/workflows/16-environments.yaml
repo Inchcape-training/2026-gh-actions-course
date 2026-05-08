@@ -17,14 +17,18 @@ jobs:
       my-env-value: ${{ vars.MY_ENV_VALUE || 'Default env value' }}  
     steps:
       - name: "Deploying to staging"
-        run: echo "Deploying to staging"
+        run: | 
+          echo "Deploying to staging"
+          echo "env value: ${{ env.my-env-value }}"
 
   e2e-tests:
     runs-on: ubuntu-latest
     needs: deploy-staging
     steps:
       - name: "E2E tests"
-        run: echo "Running end-to-end tests"
+        run: | 
+          echo "Running end-to-end tests"
+          echo "env value: ${{ env.my-env-value }}"
 
   deploy-prod:
     runs-on: ubuntu-latest
