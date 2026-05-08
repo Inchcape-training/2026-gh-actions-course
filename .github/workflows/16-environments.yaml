@@ -34,4 +34,6 @@ jobs:
       my-env-value: ${{ vars.MY_ENV_VALUE || 'Default env value' }}
     steps:
       - name: "Echo vars"
-        run: echo "Deploying to prod"
+        run: | 
+          echo "Deploying to prod"
+          echo "env value: ${{ my-env-value }}"
