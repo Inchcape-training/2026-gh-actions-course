@@ -36,4 +36,4 @@ jobs:
       - name: "Echo vars"
         run: | 
           echo "Deploying to prod"
-          echo "env value: ${{ my-env-value }}"
+          echo "env value: ${{ env.my-env-value }}"
