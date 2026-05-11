@@ -6,8 +6,9 @@ on:
 #     inputs:
 #       target-env:
 #         description: 'Select the target environment'
+#         type: environment
 #         required: true
-#         default: "staging"
+#         default: staging
 
 jobs:
   deploy-staging:
