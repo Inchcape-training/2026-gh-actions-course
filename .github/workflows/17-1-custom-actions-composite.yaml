@@ -29,6 +29,7 @@ jobs:
         with:
           node-version: '20.x'
           working-dir: ${{ env.working-directory }}
+          target-env: ${{ inputs.target-env }}
           # key: node_modules-${{ hashFiles(format('{0}/{1}', inputs.working-dir, 'package-lock.json')) }}
 
       - name: "Tests"
